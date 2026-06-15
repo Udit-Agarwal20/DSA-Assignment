@@ -1,0 +1,90 @@
+// class Solution {
+// public:
+//     ListNode* reverseList(ListNode* head) {
+//        ListNode* prev = NULL;
+//        ListNode* curr = head;
+//        while(curr){
+//         ListNode* newnode = curr->next;
+//         curr->next = prev;
+//         prev = curr;
+//         curr = newnode;
+//        }
+//        return prev;
+
+//     }
+// };
+
+// class Solution {
+// public:
+//     ListNode* middleNode(ListNode* head) {
+//         ListNode* newnode = head;
+//         ListNode* node2 = head;
+//         while(node2 && node2->next){
+//             node2=node2->next->next;
+//             newnode=newnode->next;
+
+//         }
+//         return newnode;
+//     }
+// };
+
+// class Solution {
+// public:
+//     ListNode *detectCycle(ListNode *head) {
+//          ListNode* slow = head;
+//         ListNode* fast = head;
+
+//         while (fast && fast->next) {
+//             slow = slow->next;
+//             fast = fast->next->next;
+
+//             if (slow == fast) {
+//                 slow = head;
+//                 while (slow != fast) {
+//                     slow = slow->next;
+//                     fast = fast->next;
+//                 }
+//                 return slow;
+//             }
+//         }
+//         return NULL;
+//     }
+// };
+
+// class Node
+// {
+// public:
+//     int data;
+//     Node *prev;
+//     Node *next;
+//     Node(int x)
+//     {
+//         data = x;
+//         prev = NULL;
+//         next = NULL;
+//     }
+// };
+
+//  front(Node*& head,int x)
+// {
+// Node* node = new Node(x);
+// node->next = head;
+// if(head)
+// head->prev = node;
+// head = node;
+// }
+
+// void insertEnd(Node *&head, int x)
+// {
+//     Node *node = new Node(x);
+//     if (head == NULL)
+//     {
+//         head = node;
+//         return;
+//     }
+//     Node *temp = head;
+//     while (temp->next)
+//         temp = temp->next;
+//     temp->next = node;
+//     node->prev = temp;
+// }
